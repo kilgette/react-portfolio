@@ -1,21 +1,34 @@
-import React from 'react';
+import '../styles/homepage.css';
+import avatar from ".assets/AMYK.png";
 
-export default function Home() {
+const styleObj = {
+  img: { width: "250px", height: "350px", borderRadius: "90px" },
+  flex: { display: "flex", height: "100%" },
+  textBox: { padding: "10px" },
+  p: { textAlign: "center" }
+};
+
+const HomePage = (props) => {
+
   return (
     <div>
-      <h1>Home </h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque
-        velit, lobortis ut magna varius, blandit rhoncus sem. Morbi lacinia nisi
-        ac dui fermentum, sed luctus urna tincidunt. Etiam ut feugiat ex. Cras
-        non risus mi. Curabitur mattis rutrum ipsum, ut aliquet urna imperdiet
-        ac. Sed nec nulla aliquam, bibendum odio eget, vestibulum tortor. Cras
-        rutrum ligula in tincidunt commodo. Morbi sit amet mollis orci, in
-        tristique ex. Donec nec ornare elit. Donec blandit est sed risus feugiat
-        porttitor. Vestibulum molestie hendrerit massa non consequat. Vestibulum
-        vitae lorem tortor. In elementum ultricies tempus. Interdum et malesuada
-        fames ac ante ipsum primis in faucibus.
-      </p>
+      <div className="container" style={styleObj.flex}>
+        <img id="avatar" src={avatar} style={styleObj.img}></img>
+
+        <div style={styleObj.textBox}>
+          <h1 style={styleObj.p}>About Me</h1>
+          <h3 style={styleObj.p}>My name is Amy Kilgour, welcome to my portfolio!</h3>
+          <p style={styleObj.p}>I am a junior  web developer, based in Minneapolis. </p>
+
+          <p style={styleObj.p}>
+            Placeholder text.</p>
+
+          <p style={styleObj.p}>Placeholder text</p>
+
+        </div>
+      </div>
     </div>
   );
-}
+};
+
+export default HomePage;
